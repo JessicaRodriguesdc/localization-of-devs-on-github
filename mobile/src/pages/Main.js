@@ -31,7 +31,6 @@ function Main(){
     if(!currentRegion){
         return null;
     }
-    
     return(
         <MapView initialRegion={currentRegion} style={styles.map}>
             <Marker coordinate={{ latitude: -3.8351174 , longitude:-38.6213128}}>
