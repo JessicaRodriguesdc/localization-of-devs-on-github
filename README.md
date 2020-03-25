@@ -1,4 +1,4 @@
-# SemanaOmniStack10
+# locations devs
 
 Semana OmniStack 10,Projeto criado utilizando as tecnologias ReactJS, React native , NodeJS, MondoDB.
 
