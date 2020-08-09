@@ -1,11 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const http = require('http');
 const routes = require('./routes');
+const {setupWebSocket} = require('./websocket');
 
 const app = express();
+const server = http.Server(app);
 
-mongoose.connect('mongodb+srv://<usuario>:<senha>@cluster0-rieok.mongodb.net/week10?retryWrites=true&w=majority',{
+setupWebSocket(server);
+
+mongoose.connect('mongodb+srv://jessica:jskdev@cluster0-rieok.mongodb.net/week10?retryWrites=true&w=majority',{
+//mongoose.connect('mongodb+srv://<usuario>:<senha>@cluster0-rieok.mongodb.net/week10?retryWrites=true&w=majority',{
+    //useCreateIndex:true,
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
