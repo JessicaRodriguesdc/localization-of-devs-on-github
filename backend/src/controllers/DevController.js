@@ -36,6 +36,11 @@ module.exports = {
                 location
 
             })
+
+            // Filtrar as conexoes que estao ha no maximo 10km de distancia
+            //e que o novo deve tenha no minino uma das tecnologias filtradas
+
+
         } 
     
         return response.json(dev);
